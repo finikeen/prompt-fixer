@@ -13,7 +13,7 @@ A Vue.js application that uses Claude Sonnet 4.5 API to optimize and improve you
 
 - Node.js >= 18.0.0
 - npm or yarn
-- Anthropic API key ([Get one here](https://console.anthropic.com/))
+- Github Copilot API key
 
 ## Setup Instructions
 
@@ -27,10 +27,10 @@ npm install
 
 ### 3. Configure API Key
 
-Create a `.env` file in the root directory and add your Anthropic API key:
+Create a `.env` file in the root directory and add your OpenAI API key:
 
 ```env
-VITE_ANTHROPIC_API_KEY=your_anthropic_api_key_here
+VITE_OPENAI_API_KEY=your_openai_api_key_here
 ```
 
 You can copy `.env.example` as a starting point:
@@ -51,7 +51,7 @@ Start the development server with hot-reload:
 npm run dev
 ```
 
-The application will be available at `http://localhost:5173/`
+The application will be available at `http://localhost:3000/`
 
 ### How to Use the App
 
@@ -100,14 +100,14 @@ prompt-fixer/
 - **Vue 3** - Progressive JavaScript framework
 - **PrimeVue** - Rich UI component library
 - **Tailwind CSS** - Utility-first CSS framework
-- **Anthropic Claude API** - AI-powered prompt optimization
+- **OpenAI API** - AI-powered prompt optimization
 - **Vite** - Next-generation frontend tooling
 - **Pinia** - Vue state management
 - **Vue Router** - Official router for Vue.js
 
 ## Security Note
 
-This application uses `dangerouslyAllowBrowser: true` for the Anthropic SDK, which is suitable for development and prototyping. For production applications, you should:
+This application uses `dangerouslyAllowBrowser: true` for the OpenAI SDK, which is suitable for development and prototyping. For production applications, you should:
 
 1. Create a backend API proxy
 2. Store API keys securely on the server
@@ -117,10 +117,10 @@ This application uses `dangerouslyAllowBrowser: true` for the Anthropic SDK, whi
 
 ### API Key Issues
 
-If you see "Please set your ANTHROPIC_API_KEY in the .env file":
+If you see "Please set your OPENAI_API_KEY in the .env file":
 
 - Make sure your `.env` file exists in the root directory
-- Verify the key format: `VITE_ANTHROPIC_API_KEY=sk-ant-...`
+- Verify the key format: `VITE_OPENAI_API_KEY=sk-...`
 - Restart the development server after changing `.env`
 
 ### Module Not Found
